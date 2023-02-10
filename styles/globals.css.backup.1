@@ -1,0 +1,128 @@
+:root {
+      --primary-color: rgb(26, 26, 26);
+      --secondary-color: rgb(135, 206, 250);
+      --heading-color: #1a1a1a;
+      --primary-font: "ubuntu", Courier, monospace;
+    }
+    html > * {
+      padding: 0;
+      margin: 0;
+      color: lightskyblue
+    }
+
+    * {
+      box-sizing: border-box;
+      font-size: 100%;
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    body {
+      font-family: var(--primary-font);
+      background-color: #fbfbfb;
+      margin: 0 !important;
+    }
+
+    .container {
+      max-width: 1440px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .main {
+      position: relative;
+      top: 40px;
+      width: 100%;
+      max-width: 1040px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      align-items: center;
+      height: 100px;
+      padding: 0 30px;
+    }
+
+    nav {
+      display: flex;
+      list-style-type: none;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo a {
+      color: var(--heading-color);
+      padding: 0 20px;
+      display: block;
+      position: relative;
+    }
+
+    .button{
+      background-color: var(--secondary-color);
+      padding: 12px 24px;
+      color:var(--heading-color);
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+}
+
+    .logo a h1{
+      font-size: 1.8rem;
+      padding: 0 0px;
+    }
+
+    nav li a {
+      font-size: 1.2rem;
+      margin-right: 40px;
+      color: #747474;
+      text-decoration: none;
+    }
+
+    nav li a.active {
+      font-weight: 700;
+      color: var(--heading-color);
+      /* padding-bottom: 5px; */
+      /* border-bottom: 2px solid var(--secondary-color); */
+      position: relative;
+    }
+
+    nav li a.active::after{
+      content: "";
+      background-color: var(--secondary-color);
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+
+    nav li a.active:hover::after{
+      height: 180%;
+      z-index: -1;
+      transition: cubic-bezier(0.4, 0, 0.2, 1) 0.3s all;
+      -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1) 0.3s all;
+      -moz-transition: cubic-bezier(0.4, 0, 0.2, 1) 0.3s all;
+      -ms-transition: cubic-bezier(0.4, 0, 0.2, 1) 0.3s all;
+      -o-transition: cubic-bezier(0.4, 0, 0.2, 1) 0.3s all;
+    }
+
+
+
+    .main .pageHeading {
+      margin: 60px 0;
+      max-width: 1040px;
+    }
