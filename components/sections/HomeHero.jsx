@@ -6,7 +6,7 @@ import {Content} from '../../lib/constants'
 
 const HomeHero = () => {
       return (
-            <section className="relative py-20 flex items-center justify-center h-screen -mt-[96px] bg-fixed bg-center bg-cover custom-image">
+            <section className="relative py-20 flex items-center justify-center h-screen -mt-[100px] bg-fixed bg-center bg-cover custom-image">
                   <div className='absolute top-0 left-0 right-0 bottom-0 bg-white/70 z-[2]' />
                   <Container className="relative z-[3] ">
 
