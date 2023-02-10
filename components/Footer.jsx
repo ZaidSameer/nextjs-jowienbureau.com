@@ -28,7 +28,7 @@ export default function Footer() {
                   <section className="bg-gradient-to-r from-blue-200 to-blue-100 py-16">
                         <Container className="flex flex-col md:flex-row md:items-center md:justify-between flex-wrap md:flex-nowrap">
                               <div className="pb-12 md:pb-0">
-                                    <h3 className="text-3xl mb-2">Didn't find what you're looking for?</h3>
+                                    <h3 className="text-3xl mb-2">Didn&apos;t find what you&apos;re looking for?</h3>
                                     <p className="text-gray-600">Our team is available between 9:00 AM - 6:00 PM, 7 days A week.</p>
                               </div>
                               <div className="flex flex-wrap md:flex-nowrap">
@@ -42,9 +42,10 @@ export default function Footer() {
                               <Container>
                                     <div className="flex gap-10 items-start flex-col flex-wrap md:flex-row">
                                           <div className={widgeCss}>
+
                                                 <Logo className="text-white text-2xl" withSlogan="true" sloganClassName="mb-4 text-gray-400"></Logo>
 
-                                                <p className="text-gray-400 font-normal">We are a trusted and favoured supplier of medical equipment in Iraq, providing services to both private and public sectors. Our professional team is comprised of sales, engineers, finance and delivery personnel.</p>
+                                                <p className="text-gray-400 font-normal">{Content.aboutLong}</p>
 
                                                 <h3 className="mt-8 mb-2">Follow us</h3>
                                                 <div className=" flex flex-nowrap gap-4">
@@ -69,17 +70,35 @@ export default function Footer() {
 
                                                       <ul className="w-1/2">
                                                             {navLinks.map((item, index) => {
-                                                                  return <li key={index} className={footerLink}><Link href={item.slug}>{item.label}</Link></li>
+                                                                  return(
+                                                                        <li key={index} className={footerLink}>
+                                                                              <Link href={item.slug}>{`${item.label}`}</Link>
+                                                                        </li>
+                                                                  )
                                                             })}
                                                       </ul>
                                                       <ul className="w-1/2">
-                                                            <li className={footerLink}><Link href="/privacy-policy">Investors</Link></li>
-                                                            <li className={footerLink}><Link href="/privacy-policy">Partners</Link></li>
-                                                            <li className={footerLink}><Link href="/privacy-policy">Suppliers</Link></li>
-                                                            <li className={footerLink}><Link href="/privacy-policy">Careers</Link></li>
-                                                            <li className={footerLink}><Link href="/privacy-policy">Privacy Policy</Link></li>
-                                                            <li className={footerLink}><Link href="/privacy-policy">Terms of Use</Link></li>
-                                                            <li className={footerLink}><Link href="/privacy-policy">Sitemap</Link></li>
+                                                            <li className={footerLink}>
+                                                                  <Link href="/privacy-policy">Investors</Link>
+                                                            </li>
+                                                            <li className={footerLink}>
+                                                                  <Link href="/privacy-policy">Partners</Link>
+                                                            </li>
+                                                            <li className={footerLink}>
+                                                                  <Link href="/privacy-policy">Suppliers</Link>
+                                                            </li>
+                                                            <li className={footerLink}>
+                                                                  <Link href="/privacy-policy">Careers</Link>
+                                                            </li>
+                                                            <li className={footerLink}>
+                                                                  <Link href="/privacy-policy">Privacy Policy</Link>
+                                                            </li>
+                                                            <li className={footerLink}>
+                                                                  <Link href="/privacy-policy">Terms of Use</Link>
+                                                            </li>
+                                                            <li className={footerLink}>
+                                                                  <Link href="/privacy-policy">Sitemap</Link>
+                                                            </li>
                                                       </ul>
 
                                                 </div>
