@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Content } from "../lib/constants";
-import {Slider, HomeHero, Featured, CallToAction, ProductsSection, News } from '../components';
+import {Container, Slider, HomeHero, Featured, CallToAction, ProductsSection, NewsSection } from '../components';
 
 
 export default function Home() {
@@ -15,11 +15,16 @@ export default function Home() {
       </Head>
 
       <HomeHero />
+      {/* <section className="bg-white py-[100px]">
+        <Container>
+          <h2 className="section-title"> An Intoduction</h2>
+        </Container>
+      </section> */}
       <ProductsSection />
       <Featured />
       <Slider />
       <CallToAction />
-      <News />
+      <NewsSection />
 
     </>
   );

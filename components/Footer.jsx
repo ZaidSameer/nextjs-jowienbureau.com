@@ -1,14 +1,12 @@
-import Container from "./Container";
-import Logo from "./Logo";
+import {Container, Logo, PrimaryButton} from "../components";
+import SocialIcons from "./SocialIcons";
 import Link from "next/link";
-import { SlSocialInstagram, SlSocialFacebook, SlSocialTwitter, SlSocialYoutube } from "react-icons/sl"
-import { Content, WEBSITE_NAME } from "../lib/constants";
+import Image from 'next/image'
+import { Content } from "../lib/constants";
 import { navLinks } from "../data/NavigationLinks";
-import PrimaryButton from "./PrimaryButton";
 import { MdOutlineCall } from 'react-icons/md'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { HiLocationMarker } from 'react-icons/hi'
-import Image from 'next/image'
 
 export default function Footer() {
 
@@ -16,11 +14,6 @@ export default function Footer() {
       const year = date.getFullYear();
 
       const footerLink = "text-gray-400 hover:text-blue-600 py-1"
-      const socialMediaAttr = {
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "bg-blue-600 hover:bg-blue-100 group p-3 rounded-full"
-      };
 
       const widgeCss = "md:w-[calc(33.333333%-1.67rem)] w-full text-white p-4";
       return (
@@ -38,7 +31,7 @@ export default function Footer() {
                         </Container>
                   </section>
                   <footer>
-                        <section className="pt-20 bg-gray-900">
+                        <section className="py-[100px] bg-gray-900">
                               <Container>
                                     <div className="flex gap-10 items-start flex-col flex-wrap md:flex-row">
                                           <div className={widgeCss}>
@@ -48,20 +41,7 @@ export default function Footer() {
                                                 <p className="text-gray-400 font-normal">{Content.aboutLong}</p>
 
                                                 <h3 className="mt-8 mb-2">Follow us</h3>
-                                                <div className=" flex flex-nowrap gap-4">
-                                                      <Link href="https://instagram.com" {...socialMediaAttr} >
-                                                            <SlSocialInstagram size={22} className="text-gray-200 group-hover:text-blue-600" />
-                                                      </Link>
-                                                      <Link href="https://facebook.com" {...socialMediaAttr}>
-                                                            <SlSocialFacebook size={22} className="text-gray-200 group-hover:text-blue-600" />
-                                                      </Link>
-                                                      <Link href="https://twitter.com" {...socialMediaAttr}>
-                                                            <SlSocialTwitter size={22} className="text-gray-200 group-hover:text-blue-600" />
-                                                      </Link>
-                                                      <Link href="https://youtube.com" {...socialMediaAttr}>
-                                                            <SlSocialYoutube size={22} className="text-gray-200 group-hover:text-blue-600" />
-                                                      </Link>
-                                                </div>
+                                                <SocialIcons />
                                           </div>
 
                                           <div className={widgeCss}>

@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
   return (
@@ -11,6 +12,7 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
+        <Script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></Script>
         <link
           href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
           rel="stylesheet"

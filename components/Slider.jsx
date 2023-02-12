@@ -27,7 +27,7 @@ const Slider = () => {
             <section id="gallery" className="py-[100px] bg-gray-100">
                   <Container>
 
-                        <h2 className="section-title mb-10"> Gallery </h2>
+                        <h2 className="section-title mb-10">Media Gallery </h2>
                         {SliderData.map((slide, index) => {
                               return (
                                     <div key={index} className={`relative ${index === current

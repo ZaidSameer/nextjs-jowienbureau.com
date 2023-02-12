@@ -46,12 +46,14 @@ const Navigation =() => {
                   {/* Main Menu */}
                   <ul className="hidden md:flex list-none items-center justify-center text-gray-500">
                         {navLinks.map((item, i) => {
-                              if(item.slug == "contact"){
+                              const isActive = router.pathname === item.slug
+                              const isActiveCss = isActive ? "text-blue-700 font-semibold" : null;
+                              if(item.slug == "/contact"){
                                     return false;
                               } else {
                                     return(
                                           <li className="p-4" key={item.slug}>
-                                                <Link className={`hover:border-b-2 hover:border-blue-700 text-lg hover:text-blue-800 ${router.pathname == item.slug ? "text-blue-700 font-semibold" : ""}`} href={`${item.slug}`}>{item.label}</Link>
+                                                <Link className={`hover:border-b-2 hover:border-blue-700 text-lg hover:text-blue-800 ${isActiveCss}`} href={`${item.slug}`}>{item.label}</Link>
                                           </li>
                                     )
                               }

@@ -1,3 +1,4 @@
+import Logo from "./Logo"
 import Container from "./Container"
 import PageHeading from "./PageHeading"
 import PrimaryButton from "./PrimaryButton"
@@ -6,10 +7,11 @@ import HomeHero from "./sections/HomeHero"
 import ProductsSection from "./sections/ProductsSection"
 import Featured from "./sections/Featured"
 import CallToAction from "./sections/CallToAction"
-import News from "./sections/News"
-import NewsCard from "./sections/News"
+import NewsSection from "./sections/NewsSection"
+import NewsCard from "./news/NewsCard"
 
 export {
+      Logo,
       Container,
       PageHeading,
       PrimaryButton,
@@ -18,7 +20,7 @@ export {
       ProductsSection,
       Featured,
       CallToAction,
-      News,
+      NewsSection,
       NewsCard
 
 }

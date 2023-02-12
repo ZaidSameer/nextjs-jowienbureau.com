@@ -6,7 +6,7 @@ import { SlCalender, SlArrowRight } from "react-icons/sl"
 import Link from "next/link";
 
 
-const News = () => {
+const NewsSection = () => {
   return (
     <section className="bg-white py-[100px]">
       <Container>
@@ -62,4 +62,4 @@ const News = () => {
   )
 }
 
-export default News
+export default NewsSection

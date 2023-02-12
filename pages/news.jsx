@@ -1,5 +1,4 @@
-import {Container, PageHeading, PrimaryButton} from "../components"
-import NewsCard from "../components/news/NewsCard";
+import {Container, PageHeading, PrimaryButton, NewsCard} from "../components"
 import { SlArrowRight } from "react-icons/sl"
 import newsList from  "../data/newsList"
 
@@ -29,7 +28,7 @@ export default function News() {
     <>
       <PageHeading image={headImage}>
         <h1 className="section-title text-blue-600">News & Events</h1>
-        <p className="text-gray-500 text-lg">
+        <p className="text-gray-600 text-lg">
           Get the latest updates from the Jowien Bureau on our health sector news page. Follow us for coverage of our events, initiatives, and more.
         </p>
       </PageHeading>
@@ -37,8 +36,8 @@ export default function News() {
       <section className="py-20">
         <Container>
 
-          {/* {JSON.stringify(newsList)} */}
-          <div className="flex mb-20 gap-10 items-start flex-col flex-wrap md:flex-row">
+          {/* <div className="bg-gray-600 flex mb-20 gap-10 justify-start flex-col flex-wrap sm:flex-row md:flex-row"> */}
+          <div className="gap-10 mb-20 w-full h-full columns-1 sm:columns-2 md:columns-3">
           {
             newsList.map((item, index) => {
               return(
@@ -46,13 +45,16 @@ export default function News() {
                   key={item.uid}
                   image={item.image}
                   date={item.date}
+                  category={item.category}
                   title={item.title}
-                  excerpt={item.excerpt} />
+                  excerpt={item.excerpt}
+                  index={index} />
               )
             })
           }
           </div>
         </Container>
+
         <Container>
           <div className="flex flex-wrap md:flex-nowrap">
           <PrimaryButton link="/news" className="text-lg w-full md:w-auto">

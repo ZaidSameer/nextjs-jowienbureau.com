@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+      html{
+            @apply scroll-smooth
+      }
+}
+
 @layer components {
       .btn-primary {
-            @apply flex items-center justify-center text-center bg-blue-700 hover:bg-blue-800 text-white px-10 py-3 hover:border-blue-800 rounded m-1 hover:shadow-lg;
+            @apply flex items-center justify-center text-center bg-blue-700 hover:bg-blue-800 text-white px-10 py-3 border-blue-700 border-2 hover:border-blue-800 rounded m-1 hover:shadow-lg;
       }
 
       .btn-secondary{
@@ -17,7 +23,6 @@
     }
 
 html{
-      scroll-behavior: smooth;
       font-family: "Ubuntu", sans-serif;
 }
 
